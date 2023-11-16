@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: sandboxed-containers-operator-4yig
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: sandboxed-containers-operator-4yig
+    app.kubernetes.io/part-of: sandboxed-containers-operator-1
+  name: sandboxed-containers-operator-4yig
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app.kubernetes.io/instance: sandboxed-containers-operator-4yig
+status:
+  loadBalancer: {}
